@@ -1,0 +1,9 @@
+@page "{cityName}"
+@model TP2Razor.Pages.CityManager.Exercicio08.CityDetailsModel
+@{
+    ViewData["Title"] = "Exercício 08 — Parâmetro na URL";
+}
+<h1>Exercício 08 — Parâmetro na URL</h1>
+
+<p>Você está vendo detalhes de: @Model.CityName</p>
+<a asp-page="/CityManager/Exercicio09/Cities">Ver lista de cidades</a>

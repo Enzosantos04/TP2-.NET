@@ -1,0 +1,27 @@
+@page
+@model TP2Razor.Pages.Notes.Exercicio11.ReadNotesModel
+@{
+    ViewData["Title"] = "Exercício 11 — Leitura de arquivos";
+}
+<h1>Exercício 11 — Leitura de arquivos</h1>
+
+<div asp-validation-summary="ModelOnly"></div>
+@if (Model.FileNames.Count == 0)
+{
+    <p>Nenhuma nota salva.</p>
+}
+else
+{
+    <ul>
+        @foreach (var fileName in Model.FileNames)
+        {
+            <li><a asp-page="./ReadNotes" asp-route-fileName="@fileName">@fileName</a></li>
+        }
+    </ul>
+}
+@if (Model.SelectedFileName != null)
+{
+    <h2>@Model.SelectedFileName</h2>
+    <pre>@Model.NoteContent</pre>
+}
+<p><a asp-page="/Notes/Exercicio10/SaveNote">Escrever nova nota</a></p>

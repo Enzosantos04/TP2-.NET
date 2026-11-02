@@ -1,0 +1,21 @@
+@page
+@model TP2Razor.Pages.IndexModel
+@{
+    ViewData["Title"] = "Exercícios";
+}
+<h1>TP2 — ASP.NET Core Razor Pages</h1>
+<p>Selecione um exercício. Cada etapa tem sua própria página e seu PageModel.</p>
+<ol>
+    <li><a asp-page="/CityManager/Exercicio01/CreateCity">Propriedade vinculada</a></li>
+    <li><a asp-page="/CityManager/Exercicio02/CreateCity">Parâmetro no handler</a></li>
+    <li><a asp-page="/CityManager/Exercicio03/CreateCity">Validação no servidor</a></li>
+    <li><a asp-page="/CityManager/Exercicio04/CreateCity">Validação no cliente</a></li>
+    <li><a asp-page="/CountryManager/Exercicio05/CreateCountry">Objeto complexo</a></li>
+    <li><a asp-page="/CountryManager/Exercicio06/CreateCountry">Código do país com 2 letras</a></li>
+    <li><a asp-page="/CountryManager/Exercicio07/CreateCountries">Vários países</a></li>
+    <li><a asp-page="/CityManager/Exercicio08/CityDetails" asp-route-cityName="Rio de Janeiro">Parâmetro na URL</a></li>
+    <li><a asp-page="/CityManager/Exercicio09/Cities">Links com tag helpers</a></li>
+    <li><a asp-page="/Notes/Exercicio10/SaveNote">Escrita de arquivos</a></li>
+    <li><a asp-page="/Notes/Exercicio11/ReadNotes">Leitura de arquivos</a></li>
+    <li><a asp-page="/CountryManager/Exercicio12/CreateCountry">Validação customizada</a></li>
+</ol>

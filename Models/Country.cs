@@ -1,0 +1,7 @@
+namespace TP2Razor.Models;
+
+public class Country
+{
+    public string CountryName { get; set; } = string.Empty;
+    public string CountryCode { get; set; } = string.Empty;
+}

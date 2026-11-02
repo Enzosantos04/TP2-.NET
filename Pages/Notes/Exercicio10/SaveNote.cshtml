@@ -1,0 +1,24 @@
+@page
+@model TP2Razor.Pages.Notes.Exercicio10.SaveNoteModel
+@{
+    ViewData["Title"] = "Exercício 10 — Escrita de arquivos";
+}
+<h1>Exercício 10 — Escrita de arquivos</h1>
+
+<form method="post">
+    <div asp-validation-summary="ModelOnly"></div>
+    <label asp-for="Input.Content">Texto da nota</label>
+    <textarea asp-for="Input.Content" rows="6"></textarea>
+    <span asp-validation-for="Input.Content"></span>
+    <button type="submit">Salvar nota</button>
+</form>
+@if (Model.FileName != null)
+{
+    <p class="result">Arquivo salvo: @Model.FileName</p>
+    <a href="@Url.Content("~/files/" + Model.FileName)" download>Baixar nota</a>
+}
+<p><a asp-page="/Notes/Exercicio11/ReadNotes">Ver notas salvas</a></p>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

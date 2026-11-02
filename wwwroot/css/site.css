@@ -1,0 +1,23 @@
+* { box-sizing: border-box; }
+body { max-width: 780px; margin: 0 auto; padding: 24px; font-family: Arial, sans-serif; line-height: 1.6; color: #222; background: #fff; }
+header { padding-bottom: 16px; border-bottom: 1px solid #ccc; margin-bottom: 24px; }
+h1 { font-size: 1.8rem; line-height: 1.25; }
+h2 { font-size: 1.25rem; }
+a { color: #174ea6; text-underline-offset: 3px; }
+a:hover { color: #102f63; }
+form { max-width: 520px; }
+label { display: block; font-weight: bold; margin-top: 16px; }
+input, textarea { width: 100%; font: inherit; padding: 8px; border: 1px solid #777; border-radius: 4px; }
+textarea { min-height: 160px; resize: vertical; }
+button { margin-top: 20px; padding: 10px 18px; font: inherit; border: 1px solid #174ea6; border-radius: 4px; background: #174ea6; color: #fff; cursor: pointer; }
+button:hover { background: #102f63; }
+:focus-visible { outline: 3px solid #bf6400; outline-offset: 3px; }
+.field-validation-error, .validation-summary-errors { color: #a11818; }
+.field-validation-error { display: block; }
+.input-validation-error { border-color: #a11818; }
+.validation-summary-valid { display: none; }
+.result { margin-top: 24px; color: #24552e; }
+li { margin-bottom: 10px; }
+fieldset { min-width: 0; margin: 16px 0; padding: 12px 16px 20px; border: 1px solid #ccc; }
+legend { font-weight: bold; }
+pre { padding: 16px; background: #f3f3f3; white-space: pre-wrap; overflow-wrap: anywhere; }

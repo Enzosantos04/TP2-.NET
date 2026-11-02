@@ -1,0 +1,38 @@
+@page
+@model TP2Razor.Pages.CountryManager.Exercicio07.CreateCountriesModel
+@{
+    ViewData["Title"] = "Exercício 07 — Vários países";
+}
+<h1>Exercício 07 — Vários países</h1>
+
+<p>Preencha os cinco países e envie todos de uma vez.</p>
+<form method="post">
+    <div asp-validation-summary="ModelOnly"></div>
+    @for (int i = 0; i < Model.Inputs.Count; i++)
+    {
+        <fieldset>
+            <legend>País @(i + 1)</legend>
+            <label asp-for="Inputs[i].CountryName">Nome do país</label>
+            <input asp-for="Inputs[i].CountryName" />
+            <span asp-validation-for="Inputs[i].CountryName"></span>
+            <label asp-for="Inputs[i].CountryCode">Código do país</label>
+            <input asp-for="Inputs[i].CountryCode" />
+            <span asp-validation-for="Inputs[i].CountryCode"></span>
+        </fieldset>
+    }
+    <button type="submit">Cadastrar países</button>
+</form>
+@if (Model.Countries.Count > 0)
+{
+    <h2>Países cadastrados</h2>
+    <ul>
+        @foreach (var country in Model.Countries)
+        {
+            <li>@country.CountryName (@country.CountryCode)</li>
+        }
+    </ul>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

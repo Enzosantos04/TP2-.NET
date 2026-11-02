@@ -1,0 +1,16 @@
+@page
+@model TP2Razor.Pages.CityManager.Exercicio01.CreateCityModel
+@{
+    ViewData["Title"] = "Exercício 01 — Propriedade vinculada";
+}
+<h1>Exercício 01 — Propriedade vinculada</h1>
+
+<form method="post">
+    <label asp-for="CityName">Nome da cidade</label>
+    <input asp-for="CityName" />
+    <button type="submit">Enviar cidade</button>
+</form>
+@if (Model.Submitted)
+{
+    <p class="result">Cidade recebida: @Model.CityName</p>
+}

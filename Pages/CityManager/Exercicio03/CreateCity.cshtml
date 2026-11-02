@@ -1,0 +1,18 @@
+@page
+@model TP2Razor.Pages.CityManager.Exercicio03.CreateCityModel
+@{
+    ViewData["Title"] = "Exercício 03 — Validação no servidor";
+}
+<h1>Exercício 03 — Validação no servidor</h1>
+
+<p>Informe um nome com pelo menos 3 caracteres.</p>
+<form method="post" novalidate>
+    <label asp-for="Input.CityName">Nome da cidade</label>
+    <input asp-for="Input.CityName" />
+    <span asp-validation-for="Input.CityName"></span>
+    <button type="submit">Enviar cidade</button>
+</form>
+@if (Model.Message != null)
+{
+    <p class="result">@Model.Message</p>
+}
